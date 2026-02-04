@@ -3,22 +3,328 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BoomStock</title>
+  <title>BoomStock — A Backyard Music Festival</title>
+  <meta name="description" content="BoomStock — a family-friendly backyard music festival." />
   <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
-  <header class="header">
-    <h1>BoomStock</h1>
-    <p class="tagline">Backyard festival vibes.</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="BoomStock Home">
+        <span class="logo-mark">🎸</span>
+        <span class="logo-text">BoomStock</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          ☰
+          <span class="sr-only">Menu</span>
+        </button>
+        <div class="nav-menu" id="navMenu">
+          <a href="#about">About</a>
+          <a href="#lineup">Lineup</a>
+          <a href="#schedule">Schedule</a>
+          <a href="#tickets">RSVP</a>
+          <a href="#faq">FAQ</a>
+          <a href="#location">Location</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
   </header>
 
-  <main class="container">
-    <section class="card">
-      <h2>About</h2>
-      <p>BoomStock is our backyard music festival—good people, good tunes, good snacks.</p>
-      <button id="btn">Click me</button>
-      <p id="msg"></p>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">Backyard Festival • Family-Friendly • Good Vibes Only</p>
+          <h1>BoomStock</h1>
+          <p class="subhead">
+            A music festival hosted at our house — bring a chair, bring a smile,
+            and prepare for “one more song” energy.
+          </p>
+
+          <div class="hero-meta">
+            <div class="meta-card">
+              <div class="meta-label">Date</div>
+              <div class="meta-value" id="eventDate">TBD</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-label">Location</div>
+              <div class="meta-value">Strafford, NH</div>
+            </div>
+            <div class="meta-card">
+              <div class="meta-label">Gates</div>
+              <div class="meta-value">2:00 PM</div>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#tickets">RSVP / Tickets</a>
+            <a class="btn btn-ghost" href="#lineup">See the lineup</a>
+          </div>
+
+          <p class="fineprint">
+            *This is a private property event. Please be respectful, safe, and kind.
+          </p>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="poster">
+            <div class="poster-top">BoomStock</div>
+            <div class="poster-mid">
+              <div class="poster-date" id="posterDate">TBD</div>
+              <div class="poster-tag">Vendor Vibes • Jam Band Energy</div>
+            </div>
+            <div class="poster-bottom">BYO Chair • Family Friendly • Rain Plan Ready</div>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          BoomStock is our backyard music festival — a low-key, high-fun day of live music,
+          good food, and community. Expect friendly faces, a relaxed vibe, and the occasional
+          drummer who insists he’s “not counting” (but absolutely is).
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>What it is</h3>
+            <p>Live music, hangout zones, food, and family-friendly fun.</p>
+          </div>
+          <div class="card">
+            <h3>What it isn’t</h3>
+            <p>It’s not a stadium show. It’s not fancy. It is, however, extremely awesome.</p>
+          </div>
+          <div class="card">
+            <h3>What to bring</h3>
+            <p>Chair/blanket, layers, bug spray, water bottle, and a “yes” attitude.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINEUP -->
+    <section id="lineup" class="section alt">
+      <div class="container">
+        <h2>Lineup</h2>
+        <p class="muted">Swap these out with your actual artists. Add as many as you want.</p>
+
+        <div class="grid-3" id="lineupGrid">
+          <article class="artist card">
+            <h3>BoomSoss</h3>
+            <p class="muted">Jam / Covers / “One more?”</p>
+            <p>Feel-good grooves and the occasional drum fill that causes minor weather events.</p>
+          </article>
+
+          <article class="artist card">
+            <h3>Guest Band #1</h3>
+            <p class="muted">Genre</p>
+            <p>Short description. Add links below if you want.</p>
+          </article>
+
+          <article class="artist card">
+            <h3>Guest Band #2</h3>
+            <p class="muted">Genre</p>
+            <p>Short description. Add links below if you want.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section id="schedule" class="section">
+      <div class="container">
+        <h2>Schedule</h2>
+        <p class="muted">A simple schedule table. Easy to edit.</p>
+
+        <div class="table card">
+          <div class="table-row table-head">
+            <div>Time</div>
+            <div>Set</div>
+            <div>Notes</div>
+          </div>
+
+          <div class="table-row">
+            <div>2:00 PM</div>
+            <div>Gates Open</div>
+            <div>Find your spot, say hi, claim a chair kingdom.</div>
+          </div>
+          <div class="table-row">
+            <div>3:00 PM</div>
+            <div>Guest Band #1</div>
+            <div>Warm-up grooves.</div>
+          </div>
+          <div class="table-row">
+            <div>5:00 PM</div>
+            <div>Food / Break</div>
+            <div>Refuel. Hydrate. Pretend you’ll go to bed early.</div>
+          </div>
+          <div class="table-row">
+            <div>6:30 PM</div>
+            <div>BoomSoss</div>
+            <div>Sunset set. “One more song” likely.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP / TICKETS -->
+    <section id="tickets" class="section alt">
+      <div class="container">
+        <h2>RSVP / Tickets</h2>
+        <p>
+          Keep it simple: you can use a Google Form, Eventbrite, or just email/text RSVPs.
+          Below is a plug-and-play Google Form embed placeholder.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Quick RSVP</h3>
+            <ol>
+              <li>Create a Google Form (name, # guests, email, etc.)</li>
+              <li>Click “Send” → “Embed” → copy the iframe</li>
+              <li>Replace the placeholder iframe below</li>
+            </ol>
+          </div>
+
+          <div class="card">
+            <h3>Donation / Cover</h3>
+            <p class="muted">Optional. If you do a suggested donation, say what it supports.</p>
+            <p>
+              Example: “Suggested donation $10–$20 helps cover sound gear, porta-potty, and snacks.”
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>RSVP Form</h3>
+          <p class="muted">Replace this iframe with your real form embed.</p>
+          <div class="embed">
+            <iframe
+              title="BoomStock RSVP Form"
+              src="about:blank"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <h2>FAQ</h2>
+
+        <div class="accordion">
+          <details class="card">
+            <summary>Is this family-friendly?</summary>
+            <p>Yep — kids are welcome. Keep it respectful and neighbor-friendly.</p>
+          </details>
+
+          <details class="card">
+            <summary>What should I bring?</summary>
+            <p>Chair/blanket, layers, bug spray, water bottle, and good vibes.</p>
+          </details>
+
+          <details class="card">
+            <summary>Is there parking?</summary>
+            <p>Add your parking plan here (onsite, overflow, carpool suggestion, etc.).</p>
+          </details>
+
+          <details class="card">
+            <summary>Rain plan?</summary>
+            <p>Share your plan: tents, barn, reschedule policy, etc.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" class="section alt">
+      <div class="container">
+        <h2>Location</h2>
+        <p class="muted">
+          Since this is at your house, you may want to keep the address private and only share it after RSVP.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Address</h3>
+            <p><strong>Private property event</strong></p>
+            <p>Address shared after RSVP confirmation.</p>
+
+            <h3>Accessibility</h3>
+            <p>Add terrain notes (grass, slopes), seating options, bathroom access, etc.</p>
+          </div>
+
+          <div class="card">
+            <h3>Map (Optional)</h3>
+            <p class="muted">You can embed a Google Map here if you’re comfortable doing so.</p>
+            <div class="embed">
+              <iframe
+                title="BoomStock Map"
+                src="about:blank"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Questions? Want to play? Want to vend? Reach out.</p>
+
+        <div class="grid-2">
+          <form class="card" id="contactForm">
+            <label>
+              Name
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <p class="muted small" id="contactStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="card">
+            <h3>Want to vend?</h3>
+            <p>Add your vendor policy here (fee, power availability, setup time, etc.).</p>
+            <h3>Want to play?</h3>
+            <p>Add what you need: genre, set length, gear, etc.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> BoomStock. Hosted with love (and a modest amount of duct tape).</p>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
   </main>
 
   <script src="./script.js"></script>
